@@ -80,7 +80,7 @@ export default function ExcelUploader() {
     
         const parseNumber = (value: number) => parseFloat(value.toFixed(2));
     
-        const descripciones = new Set();
+        const descripciones: any = new Set();
     
         jsonData = jsonData.map((row) => {
             const {
@@ -213,7 +213,7 @@ export default function ExcelUploader() {
     if (tableData.length === 0) return;
   
     const header = columns.map(col => col.header).join('\t');
-    const rows = tableData.map(row =>
+    const rows = tableData.map((row: any) =>
       columns.map(col => row[col.accessorKey]).join('\t')
     );
   
